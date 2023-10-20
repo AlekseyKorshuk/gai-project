@@ -1,0 +1,79 @@
+deepspeed train.py \
+  --model_name_or_path PygmalionAI/pygmalion-6b \
+  --tokenizer_name AlekseyKorshuk/pygmalion-6b \
+  --dataset_name AlekseyKorshuk/synthetic-fight-characters-lmgym \
+  --train_to_probs False \
+  --do_train \
+  --logging_strategy steps \
+  --evaluation_strategy no \
+  --eval_steps 2100 \
+  --save_strategy epoch \
+  --save_steps 1 \
+  --save_total_limit 4 \
+  --logging_steps 10 \
+  --logging_first_step \
+  --report_to all \
+  --output_dir /models/checkpoints/pyg-exp-syn-fight \
+  --overwrite_output_dir \
+  --per_device_train_batch_size 4 \
+  --gradient_accumulation_steps 1 \
+  --max_eval_samples 500 \
+  --num_train_epochs 3 \
+  --eval_first_step False \
+  --learning_rate 5e-6 \
+  --fp16 \
+  --seed 99 \
+  --num_eval_prompts 0 \
+  --validation_split_percentage 0 \
+  --remove_unused_columns False \
+  --deepspeed deepspeed_configs/ds_config_stage_3.json \
+  --clean_enabled False \
+  --add_reward_scores False \
+  --block_size 2048 \
+  --lr_scheduler_type cosine \
+  --gradient_checkpointing True \
+  --warmup_ratio 0.03 \
+  --weight_decay 0.0 \
+  --adam_beta1 0.9 \
+  --adam_beta2 0.95 \
+  --preprocessing_num_workers 32
+
+deepspeed train.py \
+  --model_name_or_path lmsys/vicuna-7b-v1.5 \
+  --tokenizer_name lmsys/vicuna-7b-v1.5 \
+  --dataset_name AlekseyKorshuk/synthetic-fight-characters-lmgym \
+  --train_to_probs False \
+  --do_train \
+  --logging_strategy steps \
+  --evaluation_strategy no \
+  --eval_steps 2100 \
+  --save_strategy epoch \
+  --save_steps 1 \
+  --save_total_limit 4 \
+  --logging_steps 10 \
+  --logging_first_step \
+  --report_to all \
+  --output_dir /models/checkpoints/vic15-exp-syn-fight \
+  --overwrite_output_dir \
+  --per_device_train_batch_size 4 \
+  --gradient_accumulation_steps 1 \
+  --max_eval_samples 500 \
+  --num_train_epochs 3 \
+  --eval_first_step False \
+  --learning_rate 2.5e-6 \
+  --bf16 \
+  --seed 99 \
+  --num_eval_prompts 0 \
+  --validation_split_percentage 0 \
+  --remove_unused_columns False \
+  --deepspeed deepspeed_configs/ds_config_stage_3.json \
+  --clean_enabled False \
+  --add_reward_scores False \
+  --block_size 2048 \
+  --lr_scheduler_type cosine \
+  --gradient_checkpointing True \
+  --warmup_ratio 0.03 \
+  --weight_decay 0.0 \
+  --adam_beta1 0.9 \
+  --adam_beta2 0.95 \
+  --preprocessing_num_workers 32
