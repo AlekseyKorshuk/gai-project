@@ -1,19 +1,25 @@
 # Overview
 
-The main idea is to build not one ideal model that can work well with any conversation topic/environment. So in the
-future, we can mix some models and archive something similar to the TikTok feed. Here we want to make a reusable
-pipeline to generate such datasets. As well as to make it strictly Safe For Work.
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-lg-dark.svg)](https://huggingface.co/spaces/AlekseyKorshuk/gai-project)
+
+In today's fast-paced world, many individuals feel increasingly isolated and crave meaningful connections. This project
+aims not just to produce a conversational model, but to address this societal issue by creating diverse conversational
+companions. Instead of building just one ideal model for all scenarios, the objective is to create a range of models
+suited to various conversation topics and environments. By mixing different models, we aspire to achieve a dynamic and
+engaging experience similar to the TikTok feed. Our core aim is to create a reusable pipeline for generating such
+datasets and ensuring they remain Safe For Work. Through this, we hope to offer users not just a chatbot, but a digital
+companion tailored to their emotional and conversational needs.
 
 # Topics
 
 The initial list of topics:
 
-- Fight
-    - your enemy, character hates you
 - Friend
     - tell me all about your problems, funny
 - Romantic
     - love, kiss, cuddle, happy, sweet
+- Fight
+    - challenging viewpoints, character disagrees or plays devil's advocate
 
 This is very easy to scale and adapt to other categories of conversations.
 
