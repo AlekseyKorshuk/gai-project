@@ -340,7 +340,7 @@ python3 main.py --config_path romantic/config.py --output_dataset_path AlekseyKo
 
 # Analysis
 
-To analyze this data we will use Atlas by Nomic.
+To analyze this data we will use the Atlas by Nomic.
 
 ### Friendly
 
